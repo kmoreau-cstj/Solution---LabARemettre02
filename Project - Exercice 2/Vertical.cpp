@@ -18,9 +18,11 @@ int main()
 	
 	string nombreEntier1;
 	int nombre5chiffres; // Variable de la valeur à comparer
+	int nombre5chiffres01;
 	// int nombreEntier2;
 
 	nombre5chiffres = 10000; // On entre la valeur qu'il faut utiliser pour comparer
+	nombre5chiffres01 = 99999;
 
 	cout << "Veuiller entrer un nombre de 5 chiffres : "; // Le message est affiché à l'utilisateur
 	cin >> nombreEntier1; // On enregistre la valeur entrée dans un string
@@ -30,14 +32,19 @@ int main()
 											// faire la comparaison pour s'assurer qu'il comporte cinq chiffres
 	
 
-	if (( nombreEntier2 < nombre5chiffres))	// Si la veleur entrée n'est pas de cinq chiffres on affiche un message notifiant l'erreur
+	if (( nombreEntier2 < nombre5chiffres ))	// Si la veleur entrée n'est pas de cinq chiffres on affiche un message notifiant l'erreur
 	{
 
 		cout << "Ce nombre ne contient pas 5 chiffres." << endl;
 					
 	}
+	else if ((nombreEntier2 > nombre5chiffres01))	// Si la veleur entrée n'est pas de cinq chiffres on affiche un message notifiant l'erreur
+	{
 
-	else
+		cout << "Ce nombre ne contient pas 5 chiffres." << endl;
+
+	}
+	else if (nombre5chiffres <= nombreEntier2 <= nombre5chiffres01)
 	{
 		
 		cout << nombreEntier1[0] << endl;
