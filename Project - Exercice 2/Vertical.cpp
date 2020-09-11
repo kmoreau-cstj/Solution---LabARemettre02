@@ -50,7 +50,7 @@ int main()
 		cout << nombreEntier1[0] << endl;
 		cout << nombreEntier1[1] << endl;
 		cout << nombreEntier1[2] << endl;
-		cout << nombreEntier1[3] << endl;
+		cout << nombreEntier1[3] << endl; 
 		cout << nombreEntier1[4] << endl;
 	}
 			
