@@ -1,5 +1,5 @@
-// But : Demander ‡ l'utilisateur un entier et de l'afficher ‡ la verticale seulement s'il est de cinq chiffres,
-//		 dans le cas contraire un message mantionnera que l'entier ne contient pas cinq chiffres
+// But : Demander √† l'utilisateur un entier et de l'afficher √† la verticale seulement s'il est de cinq chiffres,
+// FR : 		 dans le cas contraire un message mantionnera que l'entier ne contient pas cinq chiffres
 // Auteur : Alexis Levert
 // Date : 09 Septembre 2020
 
@@ -8,7 +8,7 @@
 
 
 #include <iostream>
-#include <string>
+#include <string>			// KM : pourquoi string ???
 using namespace std;
 
 
@@ -17,37 +17,43 @@ int main()
 	setlocale(LC_ALL, ""); 
 	
 	string nombreEntier1;
-	int nombre5chiffres; // Variable de la valeur ‡ comparer
+	int nombre5chiffres; // Variable de la valeur √† comparer
 	int nombre5chiffres01;
 	// int nombreEntier2;
 
 	nombre5chiffres = 10000; // On entre la valeur qu'il faut utiliser pour comparer
 	nombre5chiffres01 = 99999;
 
-	cout << "Veuiller entrer un nombre de 5 chiffres : "; // Le message est affichÈ ‡ l'utilisateur
-	cin >> nombreEntier1; // On enregistre la valeur entrÈe dans un string
+	cout << "Veuiller entrer un nombre de 5 chiffres : "; // Le message est affich√© √† l'utilisateur
+	// KM : Pourquoi utiliser un string ??
+	cin >> nombreEntier1; // On enregistre la valeur entr√©e dans un string
 	
 			
-	int nombreEntier2 = stoi(nombreEntier1); // On enregistre la valeur entrÈ dans un int ce qui permet d'en 
+	int nombreEntier2 = stoi(nombreEntier1); // FR : On enregistre la valeur entr√© dans un int ce qui permet d'en 
 											// faire la comparaison pour s'assurer qu'il comporte cinq chiffres
 	
 
-	if (( nombreEntier2 < nombre5chiffres ))	// Si la veleur entrÈe n'est pas de cinq chiffres on affiche un message notifiant l'erreur
+	// KM : Excellents tests !!
+	if (( nombreEntier2 < nombre5chiffres ))	// Si la veleur entr√©e n'est pas de cinq chiffres on affiche un message notifiant l'erreur
 	{
 
 		cout << "Ce nombre ne contient pas 5 chiffres." << endl;
 					
 	}
-	else if ((nombreEntier2 > nombre5chiffres01))	// Si la veleur entrÈe n'est pas de cinq chiffres on affiche un message notifiant l'erreur
+	else if ((nombreEntier2 > nombre5chiffres01))	// Si la veleur entr√©e n'est pas de cinq chiffres on affiche un message notifiant l'erreur
 	{
 
 		cout << "Ce nombre ne contient pas 5 chiffres." << endl;
 
 	}
-	else if (nombre5chiffres <= nombreEntier2 <= nombre5chiffres01)
+	else 
+		// KM : Non ici tu ne peux pas utiliser deux op√©rateurs de comparaison dans la m√™me condition, 
+		// KM : il faut utiliser un && et ici tu n'en as pas besoin car tu es dans le else des deux premiers if
+		if (nombre5chiffres <= nombreEntier2 <= nombre5chiffres01)
 	{
 		
-		cout << nombreEntier1[0] << endl;
+		// KM : Il faut utiliser les notions vues en classe et nous n'avons pas encore explor√© les string
+			cout << nombreEntier1[0] << endl;
 		cout << nombreEntier1[1] << endl;
 		cout << nombreEntier1[2] << endl;
 		cout << nombreEntier1[3] << endl; 
@@ -59,11 +65,11 @@ int main()
 	
 }
 /*
-		La solution est bien nommÈe et comporte deux projets / 5
-		Les fichiers sources contiennent l'identification complËte du programme et de son auteur /5
-		Le code source est sans erreur de compilation / 15
-		Le programme est fonctionnel / 20
-		Le programme passe le plan de tests / 20
-		Le code source est largement commentÈ / 20
-		La solution est dÈposÈe dans LEA et dans GitHub. L'adresse est envoyÈe via Outlook /15
+		La solution est bien nomm√©e et comporte deux projets 5/ 5
+		Les fichiers sources contiennent l'identification compl√®te du programme et de son auteur 5/5
+		Le code source est sans erreur de compilation 15/ 15
+		Le programme est fonctionnel 20/ 20
+		Le programme passe le plan de tests 20/ 20
+		Le code source est largement comment√© 10/ 20
+		La solution est d√©pos√©e dans LEA et dans GitHub. L'adresse est envoy√©e via Outlook 15/15
 	*/
