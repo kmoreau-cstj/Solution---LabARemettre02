@@ -1,4 +1,4 @@
-// But : Demander a l'utilisateur un entier et dire si l'entier est pair ou impair
+// FR : But : Demander a l'utilisateur un entier et dire si l'entier est pair ou impair
 // Auteur : Alexis Levert
 // Date : 09 Septembre 2020
 
@@ -14,11 +14,12 @@ int main()
 	cout << "Veuiller entrer un nombre entier : ";
 		cin >> nombreEntier1;
 
-	if (nombreEntier1 % 2 == 0) // On vérifie si la valeure est paire, si non on continue
+	// KM : Il faut expliquer ici pourquoi tu utilises le % et 2 et 0 pour dÃ©terminer que le nombre est pai
+	if (nombreEntier1 % 2 == 0) // FR : On vÃ©rifie si la valeure est paire, si non on continue
 	{
-		cout << nombreEntier1 <<" est un nombre Pair "; // Message envoyé si le message est pair
+		cout << nombreEntier1 <<" est un nombre Pair "; // KM : Commentaire Ã  relire  : Message envoyÃ© si le message est pair
 	}
-	else // Si la valeure est impaire on entre dans cette boucle
+	else // FR : Si la valeure est impaire on entre dans cette boucle
 	{
 		cout << nombreEntier1 <<  " est un nombre impair";
 	}
@@ -28,6 +29,7 @@ int main()
 
 
 	/*Les tests
+	// KM : Excellent plan de tests
 
 		 23  = impair			0 = pair
 
@@ -35,7 +37,7 @@ int main()
 	*/
 
 	
-	// Cet outils peut être utiliser pour définir si un nombre est pair ou impair
+	// FR : Cet outils peut Ãªtre utiliser pour dÃ©finir si un nombre est pair ou impair
 	
 
 }
